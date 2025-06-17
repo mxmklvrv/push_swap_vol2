@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 13:08:41 by mklevero          #+#    #+#             */
-/*   Updated: 2025/06/17 16:16:34 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/06/17 17:51:34 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void	swap_b_stack(t_node **b_stack)
 	swap(b_stack);
 	write(1, "sb\n", 3);
 }
+
 void	swap_both(t_node **a_stack, t_node **b_stack)
 {
 	swap(a_stack);

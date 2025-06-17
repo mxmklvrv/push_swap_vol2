@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 16:36:13 by mklevero          #+#    #+#             */
-/*   Updated: 2025/06/17 16:09:51 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/06/17 17:53:52 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	ft_create_stack(int ac, char **av, t_node **a_stack, bool splitted)
 
 int	stack_len(t_node *stack)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!stack)
