@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 12:05:04 by mklevero          #+#    #+#             */
-/*   Updated: 2025/06/17 21:41:57 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/06/18 13:49:06 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ void	turk_sort(t_node **a_stack, t_node **b_stack)
 	else
 		while (*a_stack != small)
 			rev_rotate_a_stack(a_stack);
-	
 }
 
 void	push_back(t_node **a_stack, t_node **b_stack)
@@ -101,31 +100,3 @@ void	prep_nodes(t_node *a_stack, t_node *b_stack)
 	set_price(a_stack, b_stack);
 	set_cheapest(b_stack);
 }
-
-/*
-void final_rotation(t_node **a_stack)
-{
-    t_node *small;
-    int len;
-    int up;
-    int down;
-
-    small = find_small_num(*a_stack);
-    len = stack_len(*a_stack);
-    up = small->pos;
-    down = len - small->pos;
-    
-    if (up < down) {
-        while (*a_stack != small)
-            rotate_a_stack(a_stack);
-    }
-    else {
-        while (*a_stack != small)
-            rev_rotate_a_stack(a_stack);
-    }
-}
-
-
-
-
-*/
