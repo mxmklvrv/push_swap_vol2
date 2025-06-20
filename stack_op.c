@@ -56,11 +56,9 @@ void	ft_create_stack(int ac, char **av, t_node **a_stack, bool splitted)
 	while (i < ac)
 	{
 		check_validity(av, i, a_stack, splitted);
-		nbr = ft_atol(av[i]);
-		if (nbr < INT_MIN || nbr > INT_MAX)
-			free_and_error(a_stack, av, splitted);
+		nbr = ft_atoi_and_overflow(av[i], a_stack, av, splitted);
 		check_duplicate(av, a_stack, nbr, splitted);
-		ft_add_node(a_stack, (int)nbr, av, splitted);
+		ft_add_node(a_stack, nbr, av, splitted);
 		i++;
 	}
 	if (splitted == true)

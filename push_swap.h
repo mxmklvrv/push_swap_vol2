@@ -51,7 +51,7 @@ void				error_exit(void);
 int					ft_isspace(int c);
 int					ft_isdigit(int c);
 int					ft_new_ac_count(char **av);
-long				ft_atol(const char *nptr);
+int			ft_atoi_and_overflow(const char *nptr,t_node **a_stack, char **av, bool splitted);
 
 // split
 char				**ft_split(char const *s, char c);

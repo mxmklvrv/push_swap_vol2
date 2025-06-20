@@ -36,7 +36,7 @@ int	ft_new_ac_count(char **av)
 	return (i);
 }
 
-long	ft_atol(const char *nptr)
+int		ft_atoi_and_overflow(const char *nptr,t_node **a_stack, char **av, bool splitted)
 {
 	int		i;
 	long	num;
@@ -56,7 +56,9 @@ long	ft_atol(const char *nptr)
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		num = num * 10 + (nptr[i] - '0');
+		if((num > INT_MAX && neg == 1 )|| (num > (long)INT_MAX + 1 && neg == -1))
+			free_and_error(a_stack, av, splitted);
 		i++;
 	}
-	return (num * neg);
+	return ((int)num * neg);
 }
