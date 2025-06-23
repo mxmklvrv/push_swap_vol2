@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 16:36:13 by mklevero          #+#    #+#             */
-/*   Updated: 2025/06/17 17:53:52 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/06/23 16:15:39 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	ft_add_node(t_node **stack, int nbr, char **av, bool splitted)
 	new_current_node->next = NULL;
 	new_current_node->previous = NULL;
 	new_current_node->num = nbr;
+	new_current_node->cheapest = false;
 	if (*stack == NULL)
 		*stack = new_current_node;
 	else
@@ -46,8 +47,8 @@ void	ft_add_node(t_node **stack, int nbr, char **av, bool splitted)
 
 void	ft_create_stack(int ac, char **av, t_node **a_stack, bool splitted)
 {
-	int		i;
-	long	nbr;
+	int	i;
+	int	nbr;
 
 	if (splitted == true)
 		i = 0;

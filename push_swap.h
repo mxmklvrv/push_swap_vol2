@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 16:19:19 by mklevero          #+#    #+#             */
-/*   Updated: 2025/06/23 15:10:47 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/06/23 15:16:49 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ typedef struct s_node
 void				check_empty_input(char **av);
 void				check_validity(char **av, int i, t_node **a_stack,
 						bool splitted);
-void				check_duplicate(char **av, t_node **a_stack, long nbr,
+void				check_duplicate(char **av, t_node **a_stack, int nbr,
 						bool splitted);
 void				check_sort(t_node **a_stack, t_node **b_stack);
 bool				is_sorted(t_node *stack);

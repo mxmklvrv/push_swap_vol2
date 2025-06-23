@@ -6,12 +6,12 @@
 #    By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/30 14:31:23 by mklevero          #+#    #+#              #
-#    Updated: 2025/06/23 14:59:22 by mklevero         ###   ########.fr        #
+#    Updated: 2025/06/23 16:02:31 by mklevero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
-CC = cc
+CC = cc 
 CFLAGS = -Wall -Wextra -Werror
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a
