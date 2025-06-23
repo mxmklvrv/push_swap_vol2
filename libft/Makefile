@@ -29,10 +29,11 @@ BONUSOBJ = $(BONUSSRCS:.c=.o)
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+HEADERS = libft.h
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(HEADERS)
 	ar rcs $(NAME) $(OBJ)
 
 %.o: %.c

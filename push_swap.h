@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 16:19:19 by mklevero          #+#    #+#             */
-/*   Updated: 2025/06/18 13:49:27 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/06/23 15:10:47 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,8 @@ void				error_exit(void);
 int					ft_isspace(int c);
 int					ft_isdigit(int c);
 int					ft_new_ac_count(char **av);
-int			ft_atoi_and_overflow(const char *nptr,t_node **a_stack, char **av, bool splitted);
+int					ft_atoi_and_overflow(const char *nptr, t_node **a_stack,
+						char **av, bool splitted);
 
 // split
 char				**ft_split(char const *s, char c);

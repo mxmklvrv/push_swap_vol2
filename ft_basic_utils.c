@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 15:22:47 by mklevero          #+#    #+#             */
-/*   Updated: 2025/06/17 19:35:20 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/06/23 15:09:55 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ int	ft_new_ac_count(char **av)
 	return (i);
 }
 
-int		ft_atoi_and_overflow(const char *nptr,t_node **a_stack, char **av, bool splitted)
+int	ft_atoi_and_overflow(const char *nptr, t_node **a_stack, char **av,
+		bool splitted)
 {
 	int		i;
 	long	num;
@@ -56,7 +57,8 @@ int		ft_atoi_and_overflow(const char *nptr,t_node **a_stack, char **av, bool spl
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		num = num * 10 + (nptr[i] - '0');
-		if((num > INT_MAX && neg == 1 )|| (num > (long)INT_MAX + 1 && neg == -1))
+		if ((num > INT_MAX && neg == 1)
+			|| (num > (long)INT_MAX + 1 && neg == -1))
 			free_and_error(a_stack, av, splitted);
 		i++;
 	}
